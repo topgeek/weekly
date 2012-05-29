@@ -1,0 +1,222 @@
+/*------------------------------------*\
+  RESET
+\*------------------------------------*/
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0b1 | 201101
+   NOTE:WORK IN PROGRESS
+   USE WITH CAUTION AND TEST WITH ABANDON */
+
+html,body,div,span,applet,object,iframe,
+h1,h2,h3,h4,h5,h6,p,blockquote,pre,
+a,abbr,acronym,address,big,cite,code,
+del,dfn,em,img,ins,kbd,q,s,samp,
+small,strike,strong,sub,sup,tt,var,
+b,u,i,center,
+dl,dt,dd,ol,ul,li,
+fieldset,form,label,legend,
+table,caption,tbody,tfoot,thead,tr,th,td,
+article,aside,canvas,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section,summary,
+time,mark,audio,video{
+  margin:0;
+  padding:0;
+  border:0;
+  outline:0;
+  font-size:100%;
+  font:inherit;
+  vertical-align:baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section{
+  display:block;
+}
+body{
+  line-height:1;
+}
+ol,ul{
+  list-style:none;
+}
+blockquote,q{
+  quotes:none;
+}
+blockquote:before,blockquote:after,
+q:before,q:after{
+  content:'';
+  content:none;
+}
+/* remember to define visible focus styles!
+:focus{
+  outline:?????;
+} */
+
+/* remember to highlight inserts somehow! */
+ins{
+  text-decoration:none;
+}
+del{
+  text-decoration:line-through;
+}
+
+table{
+  border-collapse:collapse;
+  border-spacing:0;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: ".";    
+  display: block;    
+  height: 0;    
+  overflow: hidden;	
+}
+.clearfix:after {clear: both;}
+.clearfix {zoom: 1;} /* IE < 8 */
+
+/*------------------------------------*\
+  MAIN
+\*------------------------------------*/
+/* GO! */
+
+HTML {
+  border-top: 5px solid #006ab7;
+} 
+BODY { 
+	margin: 6px 10px 24px 10px;
+	font-family: "Helvetica Neue", Helvetica, Ubuntu, arial, sans-serif;
+	font-size: 14px;
+	line-height: 1.4em;
+	color: #200;
+	
+	/* background-color: #fff;
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(.5, rgba(255, 255, 255, .3)), color-stop(.5, transparent), to(transparent));
+	background-image: -moz-linear-gradient(rgba(255, 255, 255, .2) 50%, transparent 50%, transparent);
+	background-image: -o-linear-gradient(rgba(255, 255, 255, .2) 50%, transparent 50%, transparent);
+	background-image: linear-gradient(rgba(255, 255, 255, .2) 50%, transparent 50%, transparent);
+	-webkit-background-size: 50px 50px;
+	-moz-background-size: 50px 50px;
+	background-size: 50px 50px; */
+	
+	background-color: #fff;
+}
+
+H1 {
+	font-size: 2.9em;
+	/* letter-spacing: -1px; */
+	font-weight: bold;
+}
+
+H2 {
+	font-size: 1.5em;
+	font-weight: 500;
+}
+
+
+H1, H2, H3 { text-align: center; margin: 10px 0 28px 0; }
+
+A { color: #c00; }
+
+P {
+	margin: 1em 0;
+	line-height: 1.5em;
+}
+
+H1.title { margin-top: 0.75em; color: #c00; }
+H2.subhead { font-weight: 300; }
+
+#page {
+	width: 820px;
+	margin: 0 auto;
+	background-color: #fff;
+	/* background-color: #ccf6f7; */
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	border: 1px solid #fff;
+	/* box-shadow: 0px 1px 6px rgba(10, 10, 10, 0.5);
+	-moz-box-shadow: 0px 1px 6px rgba(10, 10, 10, 0.5);
+	-webkit-box-shadow: 0px 1px 6px rgba(10, 10, 10, 0.5); */
+}
+
+.section {
+	padding: 12px 16px;
+	background-color: #fff;
+	position: relative;
+	clear: both;
+	text-align: center;
+}
+
+.section.header {
+	background-color: transparent;
+	text-align: center;
+	/* border-bottom: 1px solid #bbb;	 */
+}
+
+.section.testimonials {
+	background-color: #f2fcfa;
+	background-color: #f0ffff;
+	border-top: 1px solid #bbb;
+	border-bottom: 1px solid #bbb;
+	text-align: left;
+}
+
+.section.subscribe {
+	/* background-color: #fff; */
+	/* border-top: 1px dashed #bbb; */
+}
+
+
+.testimonial { width: 362px; float: left; margin: 0 16px 20px; min-height: 144px; }
+.testimonial img { float: left; margin-right: 12px; width: 78px; border: 1px solid #acc }
+.testimonial .name { margin-left: 92px; font-weight: bold; margin-top: 6px; }
+.testimonial .strap { margin-left: 92px; margin-top: 0px; }
+.testimonial .quote { margin-left: 92px; font-size: 1.0em; line-height: 1.4em; color: #455 }
+.testimonial A { color: #888; }
+
+
+BUTTON { text-align: center; font-size: 15px; padding: 4px; margin: 0 auto; }
+
+
+/* MAIL CHIMP SUBSCRIBERS STUFF */
+
+.mc-sub-badge09 { position: absolute; right: 15px; top: 16px; }
+.mc-sub-badge09 li.mc-subscribers { background-color: #b00 !important; line-height: 18px; }
+.mc-sub-badge09 strong { background-color: #900 !important; }
+.mc-subscribers, .mc-power { text-align: right; line-height: 18px; }
+    .mc-subscribers {
+      padding-top: 0px; padding-bottom: 0px;
+    }
+
+
+FORM.subscribe INPUT.email {
+	font-size: 18px; padding: 4px; width: 260px;
+}
+
+FORM SPAN.label {
+	font-size: 18px;
+	color: #666;
+	padding-right: 4px;
+}
+
+/* http://www.zurb.com/article/266/super-awesome-buttons-with-css3-and-rgba */
+
+button { border-width: 0px; }
+
+.awesome, .awesome:visited, button.awesome {
+	background: #006ab7;
+	display: inline-block; 
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	padding: 5px 10px 6px; 
+	color: #fff; 
+	text-decoration: none;
+	-moz-border-radius: 5px; 
+	-webkit-border-radius: 5px;
+	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+	text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+	border-bottom: 1px solid rgba(0,0,0,0.25);
+	position: relative;
+	cursor: pointer;
+}
+	

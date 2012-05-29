@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>TopGeek Weekly: A Free, Weekly TopGeek E-mail Newsletter</title>
+        <link rel="stylesheet" type="text/css" href="{{req.static_url('weekly:static/style.css')}}" />
+        <!--[if IE]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                    $('#email').focus();
+                    $('form.subscribe').submit(function () {
+                        $.post($(this).attr('action'), $(this).serialize(), function(r) { 
+                            if (r.status == 'success') {
+                            window.location = "{{req.route_url('thankyou')}}";
+                            } else {
+                            alert('出错啦！~~');
+                            }
+                            });
+                        return false;
+                        });
+                    });
+        </script>
+</head>
+
+<body id="home">
+    <div id="page">
+        <div class="section header">		
+            <img src="http://pycon.b0.upaiyun.com/images/sponsors/topgeek.gif" style="margin: 16px 0px 10px 0px" /><br />
+            <h2 class="subhead" style="margin-top: 0">A free, once–weekly e-mail round-up of TopGeek news and articles.</h2>
+        </div>
+        <div class="section" style="text-align: center">
+            <form class="subscribe" action="{{req.route_url('subscribe')}}" method="POST">
+                <span class="label" style="display: none">Your E-mail Address&nbsp;</span> <input type="email" placeholder="Enter your e-mail address" class="email" style="width: 340px" name="email" id="email">&nbsp;&nbsp;<button class="large awesome" type="submit">Sign Me Up!</button>
+                <input type="hidden" name="list_id" value="686d36d1c9" />
+            </form>
+        </div>		
+    </div>
+
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'xxxxxxxxxxxxxxx']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+         var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+         })();
+    </script>
+</body>
+</html>
+

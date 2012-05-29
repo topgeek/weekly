@@ -1,0 +1,6 @@
+include *.txt
+include *.ini
+include *.cfg
+include *.rst
+graft src/weekly/static
+graft src/weekly/templates
